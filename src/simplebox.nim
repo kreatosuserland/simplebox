@@ -6,6 +6,7 @@ include simplebox/touch
 include simplebox/yes
 include simplebox/cat
 include simplebox/rm
+include simplebox/mv
 include simplebox/cp
 include simplebox/ls
 
@@ -17,6 +18,9 @@ dispatchMulti(
     ],
     [
     touch
+    ],
+    [
+    mv
     ],
     [
     rm
