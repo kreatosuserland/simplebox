@@ -5,7 +5,9 @@ include simplebox/basename
 include simplebox/touch
 include simplebox/yes
 include simplebox/cat
+include simplebox/rm
 include simplebox/cp
+include simplebox/ls
 
 clCfg.version = "simplebox v1.0-alpha"
 
@@ -15,6 +17,12 @@ dispatchMulti(
     ],
     [
     touch
+    ],
+    [
+    rm
+    ],
+    [
+    ls
     ],
     [
     basename
