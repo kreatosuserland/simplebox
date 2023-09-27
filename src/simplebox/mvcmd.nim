@@ -1,4 +1,6 @@
-proc mv(files: seq[string]) =
+import os
+
+proc mv*(files: seq[string]) =
     ## Move FILE or DIRECTORY into desired DIRECTORY or FILE.
     if files.len != 2:
         echo "mv: not enough arguments"

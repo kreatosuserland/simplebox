@@ -1,4 +1,4 @@
-proc cat(file: seq[string]) =
+proc cat*(file: seq[string]) =
     ## Output file contents to standard output.
 
     if file.len == 0:

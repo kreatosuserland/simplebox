@@ -1,3 +1,5 @@
-proc secho(string: seq[string]) =
+import strutils
+
+proc secho*(string: seq[string]) =
     ## Echo to standard output.
     echo string.join(" ")

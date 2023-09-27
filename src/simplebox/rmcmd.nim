@@ -1,4 +1,6 @@
-proc rm(force = false, recursive = false, interactive = false, files: seq[string]) =
+import os
+
+proc rm*(force = false, recursive = false, interactive = false, files: seq[string]) =
     ## Remove files or directories.
     
     if files.len == 0:

@@ -1,5 +1,0 @@
-[Cake]
-Tasks = make
-
-[make]
-execCmd="nim c -o=out/simplebox src/simplebox.nim"

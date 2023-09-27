@@ -1,4 +1,6 @@
-proc cp(files: seq[string]) =
+import os
+
+proc cp*(files: seq[string]) =
     ## Copy FILE into desired directory.
     if files.len != 2:
         echo "cp: not enough arguments"

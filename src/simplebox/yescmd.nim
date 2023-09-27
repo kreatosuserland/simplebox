@@ -1,7 +1,7 @@
 import sequtils
 import strutils
 
-proc yes(string: seq[string]) =
+proc yes*(string: seq[string]) =
   ## Repeatedly output a line with all specified STRING(s), or 'y'.
 
   var mainString: seq[string]

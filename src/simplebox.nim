@@ -1,16 +1,19 @@
 import os
 import cligen
-include simplebox/echo
-include simplebox/basename
-include simplebox/touch
-include simplebox/yes
-include simplebox/cat
-include simplebox/rm
-include simplebox/mv
-include simplebox/cp
-include simplebox/ls
+import simplebox/echocmd
+import simplebox/basenamecmd
+import simplebox/touchcmd
+import simplebox/yescmd
+import simplebox/catcmd
+import simplebox/rmcmd
+import simplebox/mvcmd
+import simplebox/cpcmd
+import simplebox/lscmd
 
 clCfg.version = "simplebox v1.0-alpha"
+
+if getAppFilename() == "yes":
+  dispatch(yes)
 
 dispatchMulti(
     [
@@ -29,7 +32,8 @@ dispatchMulti(
     ls
     ],
     [
-    basename
+    basename,
+    short={"multiple" : 'a'}
     ],
     [
     secho,
