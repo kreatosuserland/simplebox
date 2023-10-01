@@ -20,7 +20,7 @@ import simplebox/lncmd
 import simplebox/unamecmd
 import simplebox/sleepcmd
 
-clCfg.version = "simplebox v1.0-alpha"
+clCfg.version = "simplebox v1.0-prealpha"
 
 dispatchMulti(
     [
