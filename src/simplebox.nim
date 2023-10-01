@@ -14,6 +14,8 @@ import simplebox/mkdircmd
 import simplebox/chrootcmd
 import simplebox/whoamicmd
 import simplebox/rmdircmd
+import simplebox/falsecmd
+import simplebox/truecmd
 
 clCfg.version = "simplebox v1.0-alpha"
 
@@ -64,5 +66,13 @@ dispatchMulti(
     ],
     [
     rmdir
+    ],
+    [
+    trueCommand,
+    cmdName="true"
+    ],
+    [
+    falseCommand,
+    cmdName="false"
     ]
 )
