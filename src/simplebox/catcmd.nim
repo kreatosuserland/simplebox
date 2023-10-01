@@ -19,7 +19,6 @@ proc cat*(u = false, file: seq[string]) =
     
     for i in file:      
       if not fileExists(i):
-        echo "cat: file doesn't exist"
-        quit(1)
-
-      echo readAll(open(i))
+        echo "cat: file "&i&" doesn't exist"
+      else:
+        echo readAll(open(i))
