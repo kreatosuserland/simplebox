@@ -40,7 +40,7 @@ dispatchMulti(
     cmdName="echo"
     ],
     [
-    cat
+    cat, help = { "u": "(ignored)" }
     ],
     [
     cp
