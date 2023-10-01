@@ -9,6 +9,11 @@ import simplebox/rmcmd
 import simplebox/mvcmd
 import simplebox/cpcmd
 import simplebox/lscmd
+import simplebox/headcmd
+import simplebox/mkdircmd
+import simplebox/chrootcmd
+import simplebox/whoamicmd
+import simplebox/rmdircmd
 
 clCfg.version = "simplebox v1.0-alpha"
 
@@ -44,5 +49,20 @@ dispatchMulti(
     ],
     [
     cp
+    ],
+    [
+    head
+    ],
+    [
+    mkdir
+    ],
+    [
+    chroot
+    ],
+    [
+    whoami
+    ],
+    [
+    rmdir
     ]
 )
