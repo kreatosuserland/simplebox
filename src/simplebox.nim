@@ -20,6 +20,7 @@ import simplebox/lncmd
 import simplebox/unamecmd
 import simplebox/sleepcmd
 import simplebox/pwdcmd
+import simplebox/nproccmd
 
 clCfg.version = "simplebox v1.0-prealpha"
 
@@ -89,5 +90,8 @@ dispatchMulti(
     ],
     [
     pwd
+    ],
+    [
+    nproc
     ]
 )
