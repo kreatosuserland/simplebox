@@ -19,6 +19,7 @@ import simplebox/truecmd
 import simplebox/lncmd
 import simplebox/unamecmd
 import simplebox/sleepcmd
+import simplebox/pwdcmd
 
 clCfg.version = "simplebox v1.0-prealpha"
 
@@ -85,5 +86,8 @@ dispatchMulti(
     [
     sleepCommand,
     cmdName="sleep"
+    ],
+    [
+    pwd
     ]
 )
