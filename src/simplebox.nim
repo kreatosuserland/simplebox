@@ -16,6 +16,8 @@ import simplebox/whoamicmd
 import simplebox/rmdircmd
 import simplebox/falsecmd
 import simplebox/truecmd
+import simplebox/lncmd
+import simplebox/unamecmd
 
 clCfg.version = "simplebox v1.0-alpha"
 
@@ -74,5 +76,12 @@ dispatchMulti(
     [
     falseCommand,
     cmdName="false"
+    ],
+    [
+    ln
+    ],
+    [
+    unameCommand,
+    cmdName="uname"
     ]
 )
