@@ -1,5 +1,5 @@
-import os
 import cligen
+#import other
 import simplebox/echocmd
 import simplebox/basenamecmd
 import simplebox/touchcmd
@@ -18,11 +18,9 @@ import simplebox/falsecmd
 import simplebox/truecmd
 import simplebox/lncmd
 import simplebox/unamecmd
+import simplebox/sleepcmd
 
 clCfg.version = "simplebox v1.0-alpha"
-
-if getAppFilename() == "yes":
-  dispatch(yes)
 
 dispatchMulti(
     [
@@ -83,5 +81,9 @@ dispatchMulti(
     [
     unameCommand,
     cmdName="uname"
+    ],
+    [
+    sleepCommand,
+    cmdName="sleep"
     ]
 )
