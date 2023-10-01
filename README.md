@@ -1,6 +1,8 @@
 # simplebox
 simple coreutils.
 
+# Current state
+This project is in pre-alpha state, use at your own risk.
+
 # Building
-It builds with [cake](https://github.com/kreatosuserland/cake).
-`cake` to build. 
+Build by running `./build.sh`.
