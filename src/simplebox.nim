@@ -125,6 +125,8 @@ proc main(command = "") =
       dispatchEx(dirname)
     of "tee":
       dispatchEx(tee)
+    of "readlink":
+      dispatchEx(readlink)
     of "":
       printHelp()
       quit(0)

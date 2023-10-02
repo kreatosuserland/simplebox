@@ -17,7 +17,7 @@ These are left as of now;
   expand expr factor fmt fold groups hostid hostname id install
   join kill link logname mkfifo mknod mktemp nl
   nohup numfmt od paste pathchk pinky pr printenv ptx 
-  readlink runcon seq shred shuf sort split stat stdbuf stty sum sync tac 
+  runcon seq shred shuf sort split stat stdbuf stty sum sync tac 
   timeout tr truncate tsort tty unexpand uniq
   unlink uptime users vdir wc who
 ```
