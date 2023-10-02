@@ -22,6 +22,7 @@ import simplebox/sleepcmd
 import simplebox/pwdcmd
 import simplebox/nproccmd
 import simplebox/chmodcmd
+import simplebox/realpathcmd
 
 clCfg.version = "simplebox v1.0-prealpha"
 
@@ -99,5 +100,8 @@ dispatchMulti(
     chmodCommand,
     cmdName="chmod",
     short = { "recursive": 'R' }
+    ],
+    [
+    realpath
     ]
 )

@@ -17,7 +17,7 @@ These are left as of now;
   expand expr factor fmt fold groups hostid hostname id install
   join kill link logname md5sum mkfifo mknod mktemp nice nl
   nohup numfmt od paste pathchk pinky pr printenv ptx 
-  readlink realpath runcon seq sha1sum sha224sum sha256sum sha384sum
+  readlink runcon seq sha1sum sha224sum sha256sum sha384sum
   sha512sum shred shuf sort split stat stdbuf stty sum sync tac tail
   tee timeout tr truncate tsort tty unexpand uniq
   unlink uptime users vdir wc who
