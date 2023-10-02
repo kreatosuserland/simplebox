@@ -18,7 +18,7 @@ These are left as of now;
   join kill link logname mkfifo mknod mktemp nl
   nohup numfmt od paste pathchk pinky pr printenv ptx 
   readlink runcon seq shred shuf sort split stat stdbuf stty sum sync tac 
-  tee timeout tr truncate tsort tty unexpand uniq
+  timeout tr truncate tsort tty unexpand uniq
   unlink uptime users vdir wc who
 ```
 

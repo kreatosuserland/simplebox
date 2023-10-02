@@ -123,6 +123,8 @@ proc main(command = "") =
       dispatchEx(nice)
     of "dirname":
       dispatchEx(dirname)
+    of "tee":
+      dispatchEx(tee)
     of "":
       printHelp()
       quit(0)

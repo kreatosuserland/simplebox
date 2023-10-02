@@ -24,4 +24,5 @@ import simplebox/realpathcmd
 import simplebox/checksums
 import simplebox/tailcmd
 import simplebox/nicecmd
+import simplebox/teecmd
 import simplebox/dirnamecmd
