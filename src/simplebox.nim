@@ -4,8 +4,14 @@ include imports
 import strutils
 import cligen/parseopt3
 
-
 clCfg.version = "simplebox v1.0-prealpha"
+
+#[ 
+  I wanted to put this inside the pragma, but couldn't.
+  I am sure it is possible, LMK if you can teach me lol i give up.
+]#
+
+changeProcName("Command", "")
 
 proc printHelp() =
   echo """      _               _       _              
@@ -19,6 +25,21 @@ proc printHelp() =
   
   echo "Usage: simplebox [command [arguments]...]"
   echo "Or: command [arguments]... (when is the same name as command)\n"
+  echo "Functions:"
+  var i: int
+  var t: int
+  for c in commandList:
+    inc(t)
+    if commandList.len == t:
+      echo(c)
+    else:
+      stdout.write(c&", ")
+
+    if i == 13:
+      i = 0
+      stdout.write("\n")
+      continue
+    inc(i)
 
 proc main(command = "") =
   # Main function.
@@ -36,63 +57,63 @@ proc main(command = "") =
 
   case cmd:
     of "yes":
-      dispatchCf(yes, cmdLine = params)
+      dispatchEx(yes)
     of "basename":
-      dispatchCf(basename, short={"multiple" : 'a'}, cmdLine = params)
+      dispatchEx(basename, shrt={"multiple" : 'a'})
     of "cp":
-      dispatchCf(cp, cmdLine = params)
+      dispatchEx(cp)
     of "touch":
-      dispatchCf(touch, cmdLine = params)
+      dispatchEx(touch)
     of "mv":
-      dispatchCf(mv, cmdLine = params)
+      dispatchEx(mv)
     of "sha1sum":
-      dispatchCf(sha1sum, cmdLine = params)
+      dispatchEx(sha1sum)
     of "sha256sum":
-      dispatchCf(sha256sum, cmdLine = params)
+      dispatchEx(sha256sum)
     of "sha512sum":
-      dispatchCf(sha512sum, cmdLine = params)
+      dispatchEx(sha512sum)
     of "sha224sum":
-      dispatchCf(sha224sum, cmdLine = params)
+      dispatchEx(sha224sum)
     of "sha384sum":
-      dispatchCf(sha384sum, cmdLine = params)
+      dispatchEx(sha384sum)
     of "md5sum":
-      dispatchCf(md5sum, cmdLine = params)
+      dispatchEx(md5sum)
     of "rm":
-      dispatchCf(rm, cmdLine = params)
+      dispatchEx(rm)
     of "ls":
-      dispatchCf(ls, cmdLine = params)
+      dispatchEx(ls)
     of "chmod":
-      dispatchCf(chmodCommand, cmdName = "chmod", cmdLine = params)
+      dispatchEx(chmodCommand, cmd = "chmod")
     of "echo":
-      dispatchCf(secho, cmdName = "echo", cmdLine = params)
+      dispatchEx(echoCommand, cmd = "echo")
     of "cat":
-      dispatchCf(cat, help = { "u": "(ignored)" }, cmdLine = params)
+      dispatchEx(cat, helpInfo = { "u": "(ignored)" })
     of "head":
-      dispatchCf(head, cmdLine = params)
+      dispatchEx(head)
     of "mkdir":
-      dispatchCf(mkdir, cmdLine = params)
+      dispatchEx(mkdir)
     of "chroot":
-      dispatchCf(chroot, cmdLine = params)
+      dispatchEx(chroot)
     of "whoami":
-      dispatchCf(whoami, cmdLine = params)
+      dispatchEx(whoami)
     of "rmdir":
-      dispatchCf(rmdir, cmdLine = params)
+      dispatchEx(rmdir)
     of "nproc":
-      dispatchCf(nproc, cmdLine = params)
+      dispatchEx(nproc)
     of "realpath":
-      dispatchCf(realpath, cmdLine = params)
+      dispatchEx(realpath)
     of "pwd":
-      dispatchCf(pwd, cmdLine = params)
+      dispatchEx(pwd)
     of "true":
-      dispatchCf(trueCommand, cmdName = "true", cmdLine = params)
+      dispatchEx(trueCommand, cmd = "true")
     of "false":
-      dispatchCf(falseCommand, cmdName = "false", cmdLine = params)
+      dispatchEx(falseCommand, cmd = "false")
     of "ln":
-      dispatchCf(ln, cmdLine = params)
+      dispatchEx(ln)
     of "uname":
-      dispatchCf(unameCommand, cmdName = "uname", cmdLine = params)
+      dispatchEx(unameCommand, cmd = "uname")
     of "sleep":
-      dispatchCf(sleepCommand, cmdName = "sleep", cmdLine = params)
+      dispatchEx(sleepCommand, cmd = "sleep")
     of "":
       printHelp()
       quit(0)

@@ -1,5 +1,6 @@
 import strutils
+import ../other
 
-proc secho*(string: seq[string]) =
+proc echoCommand*(string: seq[string]) {.registerProc.} =
     ## Echo to standard output.
     echo string.join(" ")

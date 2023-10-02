@@ -2,10 +2,11 @@ import os
 import osproc
 import strutils
 import posix
+import ../other
 
 proc chroot(path: cstring): cint {.importc, header: "<unistd.h>", raises: [], tags: [], forbids: [].}
 
-proc chroot*(newrootAndcommand: seq[string]) =
+proc chroot*(newrootAndcommand: seq[string]) {.registerProc.} =
   ## Change ROOT to NEWROOT, and execute COMMAND.
   
   if newrootAndCommand.len == 0:

@@ -1,6 +1,7 @@
 import os
 import posix
 import sequtils
+import ../other
 
 proc strtol*(nptr: cstring; endptr: cstringArray; base: cint): clong {.importc, header: "<stdlib.h>", sideEffect, raises: [], tags: [], forbids: [].}
 
@@ -12,9 +13,8 @@ proc chmodInternal(file: string, permission: string) =
     echo "chmod: failed: "&err
     quit(1)
 
-proc chmodCommand*(recursive = false, fileAndPermission: seq[string]) =
+proc chmodCommand*(recursive = false, fileAndPermission: seq[string]) {.registerProc.} =
   ## Change permissions.
-  
   if fileAndPermission.len < 2:
     echo "chmod: missing file and/or permission"
     quit(1)

@@ -1,6 +1,7 @@
 import os
+import ../other
 
-proc mv*(files: seq[string]) =
+proc mv*(files: seq[string]) {.registerProc.} =
     ## Move FILE or DIRECTORY into desired DIRECTORY or FILE.
     if files.len != 2:
         echo "mv: not enough arguments"

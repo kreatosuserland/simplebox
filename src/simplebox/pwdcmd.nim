@@ -1,5 +1,6 @@
 import os
+import ../other
 
-proc pwd*() =
+proc pwd*() {.registerProc.} =
   ## Get current directory.
   echo getCurrentDir()

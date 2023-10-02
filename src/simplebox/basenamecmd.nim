@@ -1,7 +1,8 @@
 import os
 import strutils
+import ../other
 
-proc basename*(multiple = false, suffix = "", zero = false, name: seq[string]) =
+proc basename*(multiple = false, suffix = "", zero = false, name: seq[string]) {.registerProc.} =
     ## Return non-directory portion of a pathname removing suffix.
     var suffixFinal: string
     var res: string

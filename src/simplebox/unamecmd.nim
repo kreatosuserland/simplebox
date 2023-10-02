@@ -1,5 +1,6 @@
 import posix_utils
 import strutils
+import ../other
 
 proc append(v: string, t: string): string =
   # Internal proc
@@ -8,7 +9,7 @@ proc append(v: string, t: string): string =
   else:
     return v&" "&t
 
-proc unameCommand*(a = false, m = false, n = false, r = false, s = false, v = false) =
+proc unameCommand*(a = false, m = false, n = false, r = false, s = false, v = false) {.registerProc.} =
   ## Return system name.
   var final: string
   var unameInfo = uname()

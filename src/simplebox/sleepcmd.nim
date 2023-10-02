@@ -1,6 +1,7 @@
 import os
+import ../other
 
-proc sleepCommand*(seconds: seq[int]) =
+proc sleepCommand*(seconds: seq[int]) {.registerProc.} =
   ## Suspend execution for an interval
   var totalSeconds: int
 

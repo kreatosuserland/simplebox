@@ -3,6 +3,7 @@ import sequtils
 import strutils
 import algorithm
 import terminal
+import ../other
 
 proc coloredEcho(file: string) =
     if fileExists(file):
@@ -10,7 +11,7 @@ proc coloredEcho(file: string) =
     elif dirExists(file):
         stdout.styledWrite(styleBright, fgBlue, file&"  ")
 
-proc ls*(all = false, color = false, files: seq[string]) =
+proc ls*(all = false, color = false, files: seq[string]) {.registerProc.} =
     ## List information about files
     try:
         var fileResult: seq[string]

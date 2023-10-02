@@ -2,6 +2,7 @@ import os
 import strutils
 #import terminal
 import rdstdin
+import ../other
 
 proc headInternal(n: int, content: string) =
   # Internal proc.
@@ -14,7 +15,7 @@ proc headInternal(n: int, content: string) =
     stdout.write(content)
   
 
-proc head*(n = 10, files: seq[string]) =
+proc head*(n = 10, files: seq[string]) {.registerProc.} =
     ## Copy the first part of FILES.
     if isEmptyOrWhitespace(files.join("")) or files.join("") == "-":
         headInternal(n, readLineFromStdin(""))

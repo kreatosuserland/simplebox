@@ -1,6 +1,7 @@
 import os
+import ../other
 
-proc ln*(f = false, s = false, sourceAndDestination: seq[string]) =
+proc ln*(f = false, s = false, sourceAndDestination: seq[string]) {.registerProc.} =
   ## Create a link.
   
   if sourceAndDestination.len == 0:

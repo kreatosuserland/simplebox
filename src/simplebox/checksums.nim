@@ -5,7 +5,7 @@ import strutils
 import checksums/md5
 import checksums/sha2
 import checksums/sha1
-
+import ../other
 
 proc getSum(t: string, file: string): string =
   # returns the sum.
@@ -83,25 +83,25 @@ proc shaCommon*(t: string, check: bool, file: seq[string]) =
   if not check:
     echo sums.join("\n")
 
-proc sha1sum*(check = false, file: seq[string]) =
+proc sha1sum*(check = false, file: seq[string]) {.registerProc.} =
   ## Returns or checks SHA1 checksums.
   shaCommon("sha1", check, file)
 
-proc sha256sum*(check = false, file: seq[string]) =
+proc sha256sum*(check = false, file: seq[string]) {.registerProc.} =
   ## Returns or checks SHA256 checksums.
   shaCommon("sha256", check, file)
 
-proc sha224sum*(check = false, file: seq[string]) =
+proc sha224sum*(check = false, file: seq[string]) {.registerProc.} =
   ## Returns or checks SHA224 checksums.
   shaCommon("sha224", check, file)
 
-proc sha384sum*(check = false, file: seq[string]) =
+proc sha384sum*(check = false, file: seq[string]) {.registerProc.} =
   ## Returns or checks SHA384 checksums.
   shaCommon("sha384", check, file)
 
-proc sha512sum*(check = false, file: seq[string]) =
+proc sha512sum*(check = false, file: seq[string]) {.registerProc.} =
   ## Returns or checks SHA512 checksums.
   shaCommon("sha512", check, file)
 
-proc md5sum*(check = false, file: seq[string]) =
+proc md5sum*(check = false, file: seq[string]) {.registerProc.} =
   shaCommon("md5", check, file)

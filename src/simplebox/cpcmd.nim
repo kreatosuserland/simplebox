@@ -1,6 +1,7 @@
 import os
+import ../other
 
-proc cp*(files: seq[string]) =
+proc cp*(files: seq[string]) {.registerProc.} =
     ## Copy FILE into desired directory.
     if files.len != 2:
         echo "cp: not enough arguments"

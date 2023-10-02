@@ -1,5 +1,6 @@
 import posix
+import ../other
 
-proc whoami*() =
+proc whoami*() {.registerProc.} =
   ## Returns the current username.
   echo getlogin()

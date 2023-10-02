@@ -2,8 +2,9 @@ import std/rdstdin
 import std/terminal
 import std/strutils
 import std/os
+import ../other
 
-proc cat*(u = false, file: seq[string]) =
+proc cat*(u = false, file: seq[string]) {.registerProc.} =
     ## Output file contents to standard output.
     
     if not isatty(stdin) or file.join("") == "-" or isEmptyOrWhitespace(file.join("")):

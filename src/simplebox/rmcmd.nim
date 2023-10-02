@@ -1,6 +1,7 @@
 import os
+import ../other
 
-proc rm*(force = false, recursive = false, interactive = false, files: seq[string]) =
+proc rm*(force = false, recursive = false, interactive = false, files: seq[string]) {.registerProc.} =
     ## Remove files or directories.
     
     if files.len == 0:

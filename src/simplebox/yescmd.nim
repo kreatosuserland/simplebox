@@ -1,7 +1,8 @@
 import sequtils
 import strutils
+import ../other
 
-proc yes*(string: seq[string]) =
+proc yes*(string: seq[string]) {.registerProc.} =
   ## Repeatedly output a line with all specified STRING(s), or 'y'.
 
   var mainString: seq[string]
