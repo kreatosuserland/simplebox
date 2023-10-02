@@ -7,10 +7,11 @@ import ../other
 proc headInternal(n: int, content: string) =
   # Internal proc.
   var lineCount = countLines(content)
-  echo content
   if lineCount >= n: 
     for i in 0..n:
-      echo i
+      stdout.write(content.split("\n")[i])
+      if i != n:
+        echo ""
   elif lineCount <= n:
     stdout.write(content)
   
@@ -18,7 +19,9 @@ proc headInternal(n: int, content: string) =
 proc head*(n = 10, files: seq[string]) {.registerProc.} =
     ## Copy the first part of FILES.
     if isEmptyOrWhitespace(files.join("")) or files.join("") == "-":
-        headInternal(n, readLineFromStdin(""))
+        try:
+          headInternal(n, readLineFromStdin(""))
+        except: discard
         return
 
     for i in files:
