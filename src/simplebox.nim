@@ -1,28 +1,5 @@
 import cligen
-#import other
-import simplebox/echocmd
-import simplebox/basenamecmd
-import simplebox/touchcmd
-import simplebox/yescmd
-import simplebox/catcmd
-import simplebox/rmcmd
-import simplebox/mvcmd
-import simplebox/cpcmd
-import simplebox/lscmd
-import simplebox/headcmd
-import simplebox/mkdircmd
-import simplebox/chrootcmd
-import simplebox/whoamicmd
-import simplebox/rmdircmd
-import simplebox/falsecmd
-import simplebox/truecmd
-import simplebox/lncmd
-import simplebox/unamecmd
-import simplebox/sleepcmd
-import simplebox/pwdcmd
-import simplebox/nproccmd
-import simplebox/chmodcmd
-import simplebox/realpathcmd
+include imports
 
 clCfg.version = "simplebox v1.0-prealpha"
 
