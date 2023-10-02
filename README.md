@@ -12,7 +12,7 @@ The goal is to have a POSIX-compliant coreutils, while adding some BSD/GNU exten
 These are left as of now;
 
 ```
-  b2sum base32 base64 chcon chgrp chmod chown chroot cksum
+  b2sum base32 base64 chcon chgrp chown cksum
   comm csplit cut date dd df dir dircolors dirname du env
   expand expr factor fmt fold groups hostid hostname id install
   join kill link logname md5sum mkfifo mknod mktemp nice nl
