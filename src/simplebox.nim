@@ -121,6 +121,8 @@ proc main(command = "") =
       dispatchEx(sleepCommand, cmd = "sleep")
     of "nice":
       dispatchEx(nice)
+    of "dirname":
+      dispatchEx(dirname)
     of "":
       printHelp()
       quit(0)
