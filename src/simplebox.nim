@@ -4,6 +4,7 @@ include imports
 import strutils
 import cligen/parseopt3
 
+
 clCfg.version = "simplebox v1.0-prealpha"
 
 proc printHelp() =
@@ -23,7 +24,7 @@ proc main(command = "") =
   # Main function.
   var cmd: string
   var params = commandLineParams()
-
+  
   if not isEmptyOrWhitespace(command):
     cmd = command
   else:
@@ -38,20 +39,34 @@ proc main(command = "") =
       dispatchCf(yes, cmdLine = params)
     of "basename":
       dispatchCf(basename, short={"multiple" : 'a'}, cmdLine = params)
+    of "cp":
+      dispatchCf(cp, cmdLine = params)
     of "touch":
       dispatchCf(touch, cmdLine = params)
     of "mv":
       dispatchCf(mv, cmdLine = params)
+    of "sha1sum":
+      dispatchCf(sha1sum, cmdLine = params)
+    of "sha256sum":
+      dispatchCf(sha256sum, cmdLine = params)
+    of "sha512sum":
+      dispatchCf(sha512sum, cmdLine = params)
+    of "sha224sum":
+      dispatchCf(sha224sum, cmdLine = params)
+    of "sha384sum":
+      dispatchCf(sha384sum, cmdLine = params)
+    of "md5sum":
+      dispatchCf(md5sum, cmdLine = params)
     of "rm":
       dispatchCf(rm, cmdLine = params)
     of "ls":
       dispatchCf(ls, cmdLine = params)
+    of "chmod":
+      dispatchCf(chmodCommand, cmdName = "chmod", cmdLine = params)
     of "echo":
       dispatchCf(secho, cmdName = "echo", cmdLine = params)
     of "cat":
       dispatchCf(cat, help = { "u": "(ignored)" }, cmdLine = params)
-    of "cp":
-      dispatchCf(cp, cmdLine = params)
     of "head":
       dispatchCf(head, cmdLine = params)
     of "mkdir":
