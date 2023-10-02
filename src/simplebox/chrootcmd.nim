@@ -7,6 +7,11 @@ proc chroot(path: cstring): cint {.importc, header: "<unistd.h>", raises: [], ta
 
 proc chroot*(newrootAndcommand: seq[string]) =
   ## Change ROOT to NEWROOT, and execute COMMAND.
+  
+  if newrootAndCommand.len == 0:
+    echo "chroot: missing newroot argument"
+    quit(1)
+
   var nrac = newrootAndCommand 
   let newroot = newrootAndCommand[0]
   
