@@ -129,6 +129,8 @@ proc main(command = "") =
       dispatchEx(readlink)
     of "logname":
       dispatchEx(logname)
+    of "tty":
+      dispatchEx(tty)
     of "":
       printHelp()
       quit(0)

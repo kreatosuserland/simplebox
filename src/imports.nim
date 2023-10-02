@@ -28,3 +28,4 @@ import simplebox/teecmd
 import simplebox/dirnamecmd
 import simplebox/readlinkcmd
 import simplebox/lognamecmd
+import simplebox/ttycmd
