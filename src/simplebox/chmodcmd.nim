@@ -1,7 +1,6 @@
 import os
-import strutils
-import sequtils
 import posix
+import sequtils
 
 proc strtol*(nptr: cstring; endptr: cstringArray; base: cint): clong {.importc, header: "<stdlib.h>", sideEffect, raises: [], tags: [], forbids: [].}
 
