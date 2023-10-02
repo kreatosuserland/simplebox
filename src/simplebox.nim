@@ -127,6 +127,8 @@ proc main(command = "") =
       dispatchEx(tee)
     of "readlink":
       dispatchEx(readlink)
+    of "logname":
+      dispatchEx(logname)
     of "":
       printHelp()
       quit(0)

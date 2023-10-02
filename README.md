@@ -15,7 +15,7 @@ These are left as of now;
   b2sum base32 base64 chcon chgrp chown cksum
   comm csplit cut date dd df dircolors du env
   expand expr factor fmt fold groups hostid hostname id install
-  join kill link logname mkfifo mknod mktemp nl
+  join kill link mkfifo mknod mktemp nl
   nohup numfmt od paste pathchk pinky pr printenv ptx 
   runcon seq shred shuf sort split stat stdbuf stty sum sync tac 
   timeout tr truncate tsort tty unexpand uniq
