@@ -45,7 +45,6 @@ proc main(command = "") =
   # Main function.
   var cmd: string
   var params = commandLineParams()
-  
   if not isEmptyOrWhitespace(command):
     cmd = command
   else:
@@ -53,8 +52,8 @@ proc main(command = "") =
       cmd = key
       break
     if params.len > 0:
-      params.del(0)
-
+      params.delete(0)
+  
   case cmd:
     of "yes":
       dispatchEx(yes)
@@ -90,6 +89,8 @@ proc main(command = "") =
       dispatchEx(cat, helpInfo = { "u": "(ignored)" })
     of "head":
       dispatchEx(head)
+    of "tail":
+      dispatchEx(tail)
     of "mkdir":
       dispatchEx(mkdir)
     of "chroot":

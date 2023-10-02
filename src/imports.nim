@@ -22,3 +22,4 @@ import simplebox/nproccmd
 import simplebox/chmodcmd
 import simplebox/realpathcmd
 import simplebox/checksums
+import simplebox/tailcmd
