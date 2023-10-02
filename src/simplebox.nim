@@ -119,6 +119,8 @@ proc main(command = "") =
       dispatchEx(unameCommand, cmd = "uname")
     of "sleep":
       dispatchEx(sleepCommand, cmd = "sleep")
+    of "nice":
+      dispatchEx(nice)
     of "":
       printHelp()
       quit(0)
