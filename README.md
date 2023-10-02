@@ -13,11 +13,11 @@ These are left as of now;
 
 ```
   b2sum base32 base64 chcon chgrp chown cksum
-  comm csplit cut date dd df dir dircolors dirname du env
+  comm csplit cut date dd df dircolors dirname du env
   expand expr factor fmt fold groups hostid hostname id install
   join kill link logname mkfifo mknod mktemp nice nl
   nohup numfmt od paste pathchk pinky pr printenv ptx 
-  readlink runcon seq shred shuf sort split stat stdbuf stty sum sync tac tail
+  readlink runcon seq shred shuf sort split stat stdbuf stty sum sync tac 
   tee timeout tr truncate tsort tty unexpand uniq
   unlink uptime users vdir wc who
 ```

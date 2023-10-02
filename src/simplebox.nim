@@ -12,6 +12,8 @@ clCfg.version = "simplebox v1.0-prealpha"
 ]#
 
 changeProcName("Command", "")
+commandList = commandList&"dir"
+
 
 proc printHelp() =
   echo """      _               _       _              
@@ -81,6 +83,8 @@ proc main(command = "") =
       dispatchEx(rm)
     of "ls":
       dispatchEx(ls)
+    of "dir":
+      dispatchEx(ls, cmd = "dir")
     of "chmod":
       dispatchEx(chmodCommand, cmd = "chmod")
     of "echo":
