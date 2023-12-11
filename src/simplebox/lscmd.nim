@@ -11,7 +11,7 @@ proc coloredEcho(file: string) =
     elif dirExists(file):
         stdout.styledWrite(styleBright, fgBlue, file&"  ")
 
-proc ls*(all = false, color = false, files: seq[string]) {.registerProc.} =
+proc ls*(all = false, color = true, files: seq[string]) {.registerProc.} =
     ## List information about files
     try:
         var fileResult: seq[string]

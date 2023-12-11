@@ -131,6 +131,8 @@ proc main(command = "") =
       dispatchEx(logname)
     of "tty":
       dispatchEx(tty)
+    of "hostname":
+      dispatchEx(hostname)
     of "":
       printHelp()
       quit(0)

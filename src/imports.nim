@@ -29,3 +29,4 @@ import simplebox/dirnamecmd
 import simplebox/readlinkcmd
 import simplebox/lognamecmd
 import simplebox/ttycmd
+import simplebox/hostnamecmd
