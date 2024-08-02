@@ -30,3 +30,4 @@ import simplebox/readlinkcmd
 import simplebox/lognamecmd
 import simplebox/ttycmd
 import simplebox/hostnamecmd
+import simplebox/idcmd

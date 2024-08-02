@@ -133,6 +133,8 @@ proc main(command = "") =
       dispatchEx(tty)
     of "hostname":
       dispatchEx(hostname)
+    of "id":
+      dispatchEx(id, shrt={"groups": 'G'})
     of "":
       printHelp()
       quit(0)
