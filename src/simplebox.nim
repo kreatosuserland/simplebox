@@ -135,6 +135,8 @@ proc main(command = "") =
       dispatchEx(hostname)
     of "id":
       dispatchEx(id, shrt={"groups": 'G'})
+    of "env":
+      dispatchEx(env)
     of "":
       printHelp()
       quit(0)

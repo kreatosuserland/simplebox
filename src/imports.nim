@@ -31,3 +31,4 @@ import simplebox/lognamecmd
 import simplebox/ttycmd
 import simplebox/hostnamecmd
 import simplebox/idcmd
+import simplebox/envcmd
